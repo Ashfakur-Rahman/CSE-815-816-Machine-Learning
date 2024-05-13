@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real or Fake News Detection</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+			margin-top: 0;
+			margin-left: 0;
+			margin-right: 49px;
+            padding:140px;
+			text-align: center;
+			background-image: url('/static/fakenewsbg.jpg');
+			background-size: cover; /* Cover the entire screen /
+			background-position: center;
+			color: #fff; / Set text color to white for better visibility */
+		}
+
+		form {
+			max-width: 530px;
+			margin: 20px auto;
+			background-color: rgba(0, 0, 0, 0.8); /* Adding a semi-transparent white background */
+			padding: 25px;
+			border-radius: 10px;
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+		}
+
+		label {
+			display: block;
+			font-weight: bold;
+			margin-bottom: 10px;
+			font-size: 16px;
+			color: #fff;
+		}
+
+		textarea {
+			width: 100%;
+			padding: 10px;
+			margin-bottom: 20px;
+			border: 1px solid #ccc;
+			border-radius: 4px;
+			box-sizing: border-box;
+			background-color: #e9ceb1;
+		}
+
+		input[type="submit"] {
+			background-color: #4caf50;
+			color: #fff;
+			padding: 10px 20px;
+			border: none;
+			border-radius: 4px;
+			cursor: pointer;
+			font-size: 16px;
+		}
+
+		input[type="submit"]:hover {
+			background-color: #45a049;
+		}
+	</style>
+</head>
+<body>
+    <form action="/predict" method="post">
+        <label for="text">Enter the news text:</label>
+        <br>
+        <textarea name="text" rows="10" cols="50" placeholder="Type or paste your news text here..."></textarea>
+        <br>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
